@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | RPS Game</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors Game</h1>
+        <nav id="main-nav">
+            <button id="menu-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+            <ul id="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../basic-webpage/index.html">Basic Webpage</a></li>
+                <li><a href="index.html">RPS Game</a></li>
+                <li><a href="../business-adv/index.html">Business Advisor</a></li>
+                <li><a href="../rss-reader/index.html">RSS Reader</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="game-container">
+            <h2>Play Rock Paper Scissors</h2>
+            <div class="scoreboard">
+                <div>Player: <span id="player-score">0</span></div>
+                <div>Computer: <span id="computer-score">0</span></div>
+                <div>Ties: <span id="ties">0</span></div>
+            </div>
+            
+            <div class="choices">
+                <button class="choice-btn" data-choice="rock">✊</button>
+                <button class="choice-btn" data-choice="paper">✋</button>
+                <button class="choice-btn" data-choice="scissors">✌️</button>
+            </div>
+            
+            <div id="result" aria-live="polite"></div>
+            
+            <button id="reset-btn">Reset Game</button>
+        </div>
+    </main>
+    
+    <footer>
+        <p><a href="../../index.html">← Back to Portfolio</a></p>
+        <p>© 2025 My Portfolio</p>
+    </footer>
+    
+    <script src="../../js/navigation.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

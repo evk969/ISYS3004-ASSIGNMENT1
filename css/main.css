@@ -1,0 +1,74 @@
+/* Mobile-first base styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+#main-nav ul {
+    list-style: none;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+}
+
+#nav-menu {
+    display: none;
+}
+
+#nav-menu.visible {
+    display: block;
+}
+
+#nav-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+    
+    #nav-menu {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

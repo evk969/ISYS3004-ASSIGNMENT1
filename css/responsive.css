@@ -1,0 +1,167 @@
+/* responsive.css - Portfolio-wide responsive styles */
+
+/* Base responsive settings */
+html {
+    font-size: 16px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    html {
+        font-size: 17px;
+    }
+    
+    /* Global navigation adjustments */
+    #nav-menu {
+        gap: 1.5rem;
+    }
+    
+    /* Project cards layout */
+    .project-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+    
+    /* Layout adjustments */
+    body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Hide mobile menu toggle */
+    #menu-toggle {
+        display: none;
+    }
+    
+    /* Always show navigation */
+    #nav-menu {
+        display: flex;
+        position: static;
+        background: transparent;
+        width: auto;
+    }
+    
+    /* Project layout */
+    .project-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* RSS Reader specific */
+    .feed-controls {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    /* Business Advisor form */
+    .form-row {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* Container sizing */
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    /* Typography scaling */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Project cards layout */
+    .project-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* RPS Game choices */
+    .choices {
+        gap: 2rem;
+    }
+    
+    .choice-btn {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Container sizing */
+    .container {
+        max-width: 1140px;
+    }
+    
+    /* Base font scaling */
+    html {
+        font-size: 20px;
+    }
+}
+
+/* Special cases for very small devices */
+@media (max-width: 400px) {
+    /* Adjust padding */
+    body {
+        padding: 0.5rem;
+    }
+    
+    /* Compact form elements */
+    input, select, button {
+        padding: 0.5rem;
+    }
+    
+    /* RPS Game compact layout */
+    .choices {
+        gap: 0.25rem;
+    }
+    
+    .choice-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    /* Hide navigation and non-essential elements */
+    header, footer, nav {
+        display: none;
+    }
+    
+    /* Adjust text for printing */
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+    
+    /* Ensure good contrast */
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    /* Prevent page breaks in content blocks */
+    article, section {
+        page-break-inside: avoid;
+    }
+}
