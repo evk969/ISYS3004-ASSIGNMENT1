@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Business Advisor</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Flatland Business Advisor</h1>
+        <nav id="main-nav">
+            <button id="menu-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+            <ul id="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../basic-webpage/index.html">Basic Webpage</a></li>
+                <li><a href="../rps-game/index.html">RPS Game</a></li>
+                <li><a href="index.html">Business Advisor</a></li>
+                <li><a href="../rss-reader/index.html">RSS Reader</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="advisor-container">
+            <h2>Business Decision Advisor</h2>
+            <p>Get recommendations for your business decisions based on financial metrics.</p>
+            
+            <form id="advisor-form">
+                <div class="form-group">
+                    <label for="revenue">Monthly Revenue ($):</label>
+                    <input type="number" id="revenue" required min="0" step="100">
+                </div>
+                
+                <div class="form-group">
+                    <label for="expenses">Monthly Expenses ($):</label>
+                    <input type="number" id="expenses" required min="0" step="100">
+                </div>
+                
+                <div class="form-group">
+                    <label for="employees">Number of Employees:</label>
+                    <input type="number" id="employees" required min="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="industry">Industry:</label>
+                    <select id="industry" required>
+                        <option value="">Select an industry</option>
+                        <option value="retail">Retail</option>
+                        <option value="tech">Technology</option>
+                        <option value="food">Food Service</option>
+                        <option value="manufacturing">Manufacturing</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Get Advice</button>
+            </form>
+            
+            <div id="results" aria-live="polite"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <p><a href="../../index.html">← Back to Portfolio</a></p>
+        <p>© 2025 My Portfolio</p>
+    </footer>
+    
+    <script src="../../js/navigation.js"></script>
+    <script src="advisor.js"></script>
+</body>
+</html>

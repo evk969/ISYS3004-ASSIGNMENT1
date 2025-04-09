@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | RSS Reader</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>RSS Feed Reader</h1>
+        <nav id="main-nav">
+            <button id="menu-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+            <ul id="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../basic-webpage/index.html">Basic Webpage</a></li>
+                <li><a href="../rps-game/index.html">RPS Game</a></li>
+                <li><a href="../business-adv/index.html">Business Advisor</a></li>
+                <li><a href="index.html">RSS Reader</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="rss-container">
+            <h2>RSS Feed Reader</h2>
+            <p>Fetch and display content from RSS feeds</p>
+            
+            <div class="feed-controls">
+                <select id="feed-selector">
+                    <option value="">Select a predefined feed</option>
+                    <option value="https://techcrunch.com/feed/">TechCrunch</option>
+                    <option value="https://feeds.bbci.co.uk/news/rss.xml">BBC News</option>
+                    <option value="https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml">NY Times Tech</option>
+                </select>
+                
+                <span>or</span>
+                
+                <form id="custom-feed-form">
+                    <input type="url" id="custom-feed-url" placeholder="Enter RSS feed URL">
+                    <button type="submit">Fetch</button>
+                </form>
+            </div>
+            
+            <div id="loading" class="hidden">Loading feed...</div>
+            <div id="error" class="hidden" role="alert"></div>
+            
+            <div id="feed-results" aria-live="polite"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <p><a href="../../index.html">← Back to Portfolio</a></p>
+        <p>© 2025 My Portfolio</p>
+    </footer>
+    
+    <script src="../../js/navigation.js"></script>
+    <script src="reader.js"></script>
+</body>
+</html>
